@@ -1,0 +1,303 @@
+@font-face {
+    font-family: 'Myriad Pro'; /* Define una nueva fuente llamada 'Myriad Pro' */
+    src: url('fonts/MyriadPro-Regular.woff2') format('woff2'), /* URL para la fuente en formato woff2 */
+         url('fonts/MyriadPro-Regular.woff') format('woff'); /* URL para la fuente en formato woff */
+    font-weight: normal; /* Define el peso normal para la fuente */
+    font-style: normal; /* Define el estilo normal para la fuente */
+}
+
+@font-face {
+    font-family: 'Berlin Sans FB Demi Bold'; /* Define una nueva fuente llamada 'Berlin Sans FB Demi Bold' */
+    src: url('fonts/BerlinSansFBDemiBold.woff2') format('woff2'), /* URL para la fuente en formato woff2 */
+         url('fonts/BerlinSansFBDemiBold.woff') format('woff'); /* URL para la fuente en formato woff */
+    font-weight: normal; /* Define el peso normal para la fuente */
+    font-style: normal; /* Define el estilo normal para la fuente */
+}
+
+/* Estilo general del cuerpo de la página */
+body {
+    margin: 0; /* Elimina los márgenes por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total de los elementos */
+    background-color: #1f1f1f; /* Establece un color de fondo oscuro */
+    color: #000000; /* Establece el color del texto a negro */
+}
+
+/* Estilo del encabezado */
+header {
+    background-image: url(img/encambezado.jpg); /* Establece una imagen de fondo para el encabezado */
+    background-size: cover; /* Asegura que la imagen cubra todo el área del encabezado */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: #1b1d1b; /* Establece el color del texto del encabezado */
+    padding: 0px 0; /* Establece el padding superior e inferior a 0 */
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 1.5em; /* Establece el tamaño de la fuente */
+    font-weight: bold; /* Establece el grosor de la fuente a bold */
+}
+
+/* Estilo del logo */
+.logo {
+    max-width: 271.4735px; /* Establece el ancho máximo del logo */
+    max-height: 259.2px; /* Establece la altura máxima del logo */
+}
+
+/* Estilo del menú de navegación */
+nav {
+    display: flex; /* Usa flexbox para el diseño del menú */
+    justify-content: center; /* Centra el contenido del menú */
+    background-color: #000000; /* Establece un fondo negro para el menú */
+    padding: 15px 0; /* Añade padding arriba y abajo */
+}
+
+nav a {
+    font-family: 'Myriad Pro', sans-serif; /* Establece la fuente del texto en 'Myriad Pro' */
+    font-weight: bold; /* Establece el grosor de la fuente a bold */
+    color: rgb(255, 255, 255); /* Establece el color del texto a blanco */
+    text-decoration: none; /* Elimina la subrayado del texto */
+    padding: 10px 20px; /* Añade padding alrededor del enlace */
+    margin: 0 10px; /* Añade margen a los lados de los enlaces */
+    font-size: 1.1em; /* Establece el tamaño de la fuente */
+    flex-grow: 1; /* Permite que los enlaces crezcan uniformemente */
+    text-align: center; /* Centra el texto dentro del enlace */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Añade una transición suave al cambiar el color de fondo y el tamaño */
+    transform: scale(1.05); /* Escala ligeramente el tamaño del enlace */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total de los enlaces */
+    position: relative; /* Posiciona los enlaces de forma relativa */
+}
+
+.cartanavegador {
+    display: flex; /* Usa flexbox para el diseño del menú */
+    justify-content: center; /* Centra el contenido del menú */
+    background-color: #F1C40F; /* Establece un fondo amarillo para el menú */
+    padding: 2px 0; /* Añade padding arriba y abajo */
+}
+
+.cartanavegador a {
+    font-family: 'Myriad Pro', sans-serif; /* Establece la fuente del texto en 'Myriad Pro' */
+    font-weight: bold; /* Establece el grosor de la fuente a bold */
+    color: rgb(255, 255, 255); /* Establece el color del texto a blanco */
+    text-decoration: none; /* Elimina la subrayado del texto */
+    padding: 10px 20px; /* Añade padding alrededor del enlace */
+    margin: 0 10px; /* Añade margen a los lados de los enlaces */
+    font-size: 1.1em; /* Establece el tamaño de la fuente */
+    flex-grow: 1; /* Permite que los enlaces crezcan uniformemente */
+    text-align: center; /* Centra el texto dentro del enlace */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Añade una transición suave al cambiar el color de fondo y el tamaño */
+    transform: scale(1.05); /* Escala ligeramente el tamaño del enlace */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total de los enlaces */
+    position: relative; /* Posiciona los enlaces de forma relativa */
+}
+
+/* Estilo del enlace activo del menú de navegación */
+nav a.activo {
+    color: #C0392B; /* Establece el color del texto del enlace activo a rojo */
+    font-weight: bold; /* Establece el grosor de la fuente a bold */
+}
+
+/* Añade un rectángulo debajo del enlace activo */
+nav a.activo::after {
+    content: ''; /* Añade contenido vacío */
+    position: absolute; /* Posiciona el rectángulo de forma absoluta */
+    bottom: -10px; /* Posiciona el rectángulo 10px debajo del enlace */
+    left: 50%; /* Centra el rectángulo horizontalmente */
+    transform: translateX(-50%); /* Ajusta la posición del rectángulo */
+    width: 208px; /* Establece el ancho del rectángulo */
+    height: 4px; /* Establece la altura del rectángulo */
+    background-color: #C0392B; /* Establece el color de fondo del rectángulo a rojo */
+}
+
+.menu-container {
+    height: 1000px; /* Establece la altura del contenedor del menú */
+    width: 1200px; /* Establece el ancho del contenedor del menú */
+    margin: auto; /* Centra el contenedor horizontalmente */
+    padding: 0; /* Elimina el padding por defecto */
+}
+
+.menu-grid {
+    display: flex; /* Usa flexbox para el diseño de la cuadrícula del menú */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
+}
+
+.menu-item {
+    background-color: #E67E22; /* Establece el fondo naranja para los elementos del menú */
+    border: 1px solid #444; /* Añade un borde gris oscuro a los elementos del menú */
+    border-radius: 10px; /* Redondea las esquinas de los elementos del menú */
+    overflow: hidden; /* Oculta el contenido que desborde los límites del elemento */
+    margin: 8.5px; /* Añade margen alrededor de los elementos del menú */
+    width: calc(25% - 20px); /* Ajusta el ancho de los elementos para 4 por fila */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil a los elementos del menú */
+    transition: transform 0.3s; /* Añade una transición suave al transformar el tamaño */
+}
+
+.menu-item img {
+    width: 280px; /* Establece el ancho de las imágenes dentro de los elementos del menú */
+    height: 183px; /* Establece la altura de las imágenes */
+    display: block; /* Muestra las imágenes como bloques */
+}
+
+.menu-item div {
+    padding: 15px; /* Añade padding dentro de los elementos del menú */
+    text-align: center; /* Centra el texto dentro de los elementos del menú */
+}
+
+.menu-item h3 {
+    font-size: 1em; /* Establece el tamaño de la fuente para los títulos de los elementos del menú */
+    margin: 0 0 10px; /* Añade margen abajo de los títulos */
+    color: #fff; /* Establece el color del texto a blanco */
+}
+
+.menu-item p {
+    font-size: 1em; /* Establece el tamaño de la fuente para los párrafos dentro de los elementos del menú */
+    color: #ccc; /* Establece el color del texto a gris claro */
+}
+
+.menu-item:hover {
+    transform: scale(1.05); /* Escala ligeramente el tamaño del elemento al pasar el ratón */
+}
+
+h2 {
+    font-family: 'Berlin Sans FB Demi Bold', sans-serif; /* Establece la fuente del texto en 'Berlin Sans FB Demi Bold' */
+    font-weight: 800; /* Establece el grosor de la fuente a 800 */
+    font-size: 1.5em; /* Establece el tamaño de la fuente */
+    margin: 20px 0; /* Añade margen arriba y abajo */
+    color: #ffffff; /* Establece el color del texto a blanco */
+}
+
+/* Estilo del pie de página */
+.footer {
+    margin-top: 300px; /* Añade margen arriba del pie de página */
+    background-color: #000000; /* Establece un fondo negro para el pie de página */
+    color: white; /* Establece el color del texto a blanco */
+    padding: 40px; /* Añade padding alrededor del pie de página */
+}
+
+.footer-row {
+    display: flex; /* Usa flexbox para el diseño de las filas en el pie de página */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
+}
+
+/* Estilo de los enlaces en el pie de página */
+.footer a {
+    color: white; /* Establece el color del texto de los enlaces a blanco */
+    margin: 0 10px; /* Añade margen a los lados de los enlaces */
+    text-decoration: none; /* Elimina la subrayado de los enlaces */
+}
+
+.links-footer {
+    width: 20%; /* Establece el ancho de las secciones de enlaces del pie de página */
+    padding: 0 15px; /* Añade padding a los lados de las secciones de enlaces */
+}
+
+.links-footer ul li a {
+    text-decoration: none; /* Elimina la subrayado de los enlaces dentro de las listas */
+    font-size: 18px; /* Establece el tamaño de la fuente */
+    color: #ffffff; /* Establece el color del texto a blanco */
+    margin-bottom: 10px; /* Añade margen debajo de los enlaces */
+}
+
+/* Estilo de los logos en el pie de página */
+.log {
+    float: left; /* Posiciona los logos a la izquierda */
+    max-width: 150px; /* Establece el ancho máximo de los logos */
+    max-height: auto; /* Permite que la altura se ajuste automáticamente */
+}
+
+
+/* dwnqinciqwcqwmkmxcqw */
+#cart-toggle {
+    position: fixed;
+    top: 60px; /* Ajusta según la posición deseada */
+    right: 20px;
+    background-color: #F1C40F; /* Color amarillo */
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.cart-window {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 100px; /* Ajusta según la posición deseada */
+    right: 20px;
+    width: 300px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.cart-window h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.cart-window ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-window ul li {
+    margin-bottom: 10px;
+}
+
+.cart-window .total {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.cart-window button {
+    background-color: #E67E22;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+#cart-toggle:hover,
+#checkout:hover {
+    background-color: #E67E22; /* Cambia el color al pasar el ratón */
+}
+
+.cart-window button:hover {
+    background-color: #A93226; /* Cambia el color al pasar el ratón */
+}
+
+.menu-item {
+    position: relative; /* Asegura que el botón esté posicionado correctamente */
+}
+
+/* Nuevo estilo para el botón de agregar al carrito */
+.add-to-cart-btn {
+    position: absolute;
+    bottom: 120px;
+    right: 10px;
+    background-color: #D32F2F; /* Color rojo del estado "activo" del menú de navegación */
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #9a2828; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.add-to-cart {
+    font-size: 24px; /* Tamaño de fuente más grande */
+    color: #ffffff; /* Color blanco para el signo "+" */
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno al enfocar */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}

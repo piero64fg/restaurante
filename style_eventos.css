@@ -1,0 +1,190 @@
+@font-face {
+    font-family: 'Myriad Pro'; /* Define una nueva fuente llamada 'Myriad Pro' */
+    src: url('fonts/MyriadPro-Regular.woff2') format('woff2'), /* URL para la fuente en formato woff2 */
+         url('fonts/MyriadPro-Regular.woff') format('woff'); /* URL para la fuente en formato woff */
+    font-weight: normal; /* Define el peso normal para la fuente */
+    font-style: normal; /* Define el estilo normal para la fuente */
+}
+
+body {
+    font-family: 'Calisto MT', sans-serif; /* Establece la fuente predeterminada para el cuerpo */
+    margin: 0; /* Elimina los márgenes por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    background-color: #2a2a2a; /* Establece un color de fondo oscuro */
+    color: #270a0a; /* Establece el color del texto */
+}
+
+/* Estilo del encabezado */
+header {
+    background-image: url(img/encambezado.jpg); /* Establece una imagen de fondo para el encabezado */
+    background-size: cover; /* Asegura que la imagen cubra todo el área del encabezado */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: #000000; /* Establece el color del texto del encabezado */
+    padding: 0px 0; /* Establece el padding superior e inferior a 0 */
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 1.5em; /* Establece el tamaño de la fuente */
+    font-weight: bold; /* Establece el grosor de la fuente a bold */
+}
+
+/* Estilo del logo */
+.logo {
+    max-width: 271.4735px; /* Establece el ancho máximo del logo */
+    max-height: 259.2px; /* Establece la altura máxima del logo */
+}
+
+/* Estilo del menú de navegación */
+nav {
+    display: flex; /* Usa flexbox para el diseño del menú */
+    justify-content: center; /* Centra el contenido del menú */
+    background-color: #000000; /* Establece un fondo negro para el menú */
+    padding: 15px 0; /* Añade padding arriba y abajo */
+}
+
+/* Estilo de los enlaces del menú de navegación */
+nav a {
+    font-family: 'Myriad Pro', sans-serif; /* Establece la fuente del texto en 'Myriad Pro' */
+    font-weight: bold; /* Establece el grosor de la fuente a bold */
+    color: rgb(255, 255, 255); /* Establece el color del texto a blanco */
+    text-decoration: none; /* Elimina el subrayado del texto */
+    padding: 10px 20px; /* Añade padding alrededor del enlace */
+    margin: 0 10px; /* Añade margen a los lados de los enlaces */
+    font-size: 1.1em; /* Establece el tamaño de la fuente */
+    flex-grow: 1; /* Permite que los enlaces crezcan uniformemente */
+    text-align: center; /* Centra el texto dentro del enlace */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Añade una transición suave al cambiar el color de fondo y el tamaño */
+    transform: scale(1.05); /* Escala ligeramente el tamaño del enlace */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total de los enlaces */
+    position: relative; /* Posiciona los enlaces de forma relativa */
+}
+
+/* Estilo del enlace activo del menú de navegación */
+nav a.activo {
+    color: #C0392B; /* Establece el color del texto del enlace activo a rojo */
+    font-weight: bold; /* Establece el grosor de la fuente a bold */
+}
+
+/* Añade un rectángulo debajo del enlace activo */
+nav a.activo::after {
+    content: ''; /* Añade contenido vacío */
+    position: absolute; /* Posiciona el rectángulo de forma absoluta */
+    bottom: -10px; /* Posiciona el rectángulo 10px debajo del enlace */
+    left: 50%; /* Centra el rectángulo horizontalmente */
+    transform: translateX(-50%); /* Ajusta la posición del rectángulo */
+    width: 208px; /* Establece el ancho del rectángulo */
+    height: 4px; /* Establece la altura del rectángulo */
+    background-color: #C0392B; /* Establece el color de fondo del rectángulo a rojo */
+}
+
+.container {
+    max-width: 1200px; /* Establece el ancho máximo del contenedor */
+    margin: 20px auto; /* Añade margen vertical y centra el contenedor horizontalmente */
+    padding: 20px; /* Añade padding dentro del contenedor */
+    background-color: white; /* Establece el color de fondo del contenedor a blanco */
+    box-shadow: 0 0 15px rgba(39, 37, 37, 0.909); /* Añade una sombra alrededor del contenedor */
+    border-radius: 10px; /* Redondea las esquinas del contenedor */
+}
+
+h2 {
+    color: #7b3030; /* Establece el color del texto del título */
+    margin-bottom: 20px; /* Añade margen debajo del título */
+    font-size: 2em; /* Establece el tamaño de la fuente */
+    text-align: center; /* Centra el texto */
+}
+
+.events img {
+    width: 100%; /* Establece el ancho de la imagen al 100% del contenedor */
+    height: auto; /* Ajusta la altura de la imagen automáticamente */
+    border-radius: 10px; /* Redondea las esquinas de la imagen */
+    margin-top: 10px; /* Añade margen superior a la imagen */
+}
+
+.events div {
+    margin-bottom: 30px; /* Añade margen inferior al div */
+}
+
+.events h3 {
+    color: #8e44ad; /* Establece el color del texto del subtítulo */
+    font-size: 1.5em; /* Establece el tamaño de la fuente */
+    margin-bottom: 10px; /* Añade margen debajo del subtítulo */
+}
+
+.events p {
+    font-size: 1.1em; /* Establece el tamaño de la fuente */
+    color: #555; /* Establece el color del texto */
+}
+
+/* Estilo del pie de página */
+.footer {
+    background-color: #000000; /* Establece un fondo negro para el pie de página */
+    color: white; /* Establece el color del texto a blanco */
+    padding: 40px; /* Añade padding alrededor del pie de página */
+}
+
+.footer-row {
+    display: flex; /* Usa flexbox para el diseño de las filas en el pie de página */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
+}
+
+/* Estilo de los enlaces en el pie de página */
+.footer a {
+    color: white; /* Establece el color del texto de los enlaces a blanco */
+    margin: 0 10px; /* Añade margen a los lados de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+.links-footer {
+    width: 20%; /* Establece el ancho de las secciones de enlaces del pie de página */
+    padding: 0 15px; /* Añade padding a los lados de las secciones de enlaces */
+}
+
+.links-footer ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces dentro de las listas */
+    font-size: 18px; /* Establece el tamaño de la fuente */
+    color: #ffffff; /* Establece el color del texto a blanco */
+    margin-bottom: 10px; /* Añade margen debajo de los enlaces */
+}
+
+/* Estilo de los logos en el pie de página */
+.log {
+    float: left; /* Posiciona los logos a la izquierda */
+    max-width: 150px; /* Establece el ancho máximo de los logos */
+    max-height: auto; /* Permite que la altura se ajuste automáticamente */
+}
+
+/* Estilos para los contenedores de promociones */
+.container-promocion {
+    border: 4.5px solid #a53c3c; /* Establece un borde sólido de 4.5px */
+    padding: 20px; /* Añade padding dentro del contenedor de promociones */
+    margin-bottom: 20px; /* Añade margen inferior al contenedor de promociones */
+}
+
+/* Estilos para los títulos de promociones */
+.container-promocion h3 {
+    margin-top: 0; /* Elimina el margen superior del título */
+}
+
+/* Estilos para los párrafos de promociones */
+.container-promocion p {
+    margin-bottom: 0; /* Elimina el margen inferior del párrafo */
+}
+
+/* Estilos para los contenedores de imágenes de eventos */
+.imagenes-container {
+    display: flex; /* Usa flexbox para el diseño de los contenedores de imágenes */
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan a la siguiente línea */
+}
+
+/* Estilos para cada imagen de evento */
+.imagen-evento {
+    flex: 0 0 calc(33.33% - 20px); /* Establece tres columnas con espacio entre ellas */
+    margin: 10px; /* Añade margen alrededor de cada imagen */
+    text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+/* Estilos para las imágenes dentro de cada contenedor de eventos */
+.imagen-evento img {
+    width: 100%; /* Establece el ancho de la imagen al 100% del contenedor */
+    height: 200px; /* Establece una altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que las imágenes se ajusten al tamaño definido */
+}
